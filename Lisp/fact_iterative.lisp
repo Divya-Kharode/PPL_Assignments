@@ -1,0 +1,17 @@
+(terpri)
+(princ "Program to calculate factorial of a number iteratively and then display it.")
+(terpri)
+(terpri)
+(princ "Enter the number: ")
+(setq n (read))
+(setq no n)
+(defvar fact 1)
+(loop
+	(setq fact (* fact n))
+	(decf n 1)
+	(when (= n 1) (return fact))
+)
+(terpri)
+(princ "The factorial of no is: ")
+(write fact)
+
